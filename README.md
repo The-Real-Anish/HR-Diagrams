@@ -4,4 +4,4 @@ A project dedicated to understanding the process of stellar evolution, and analy
 
 # Files
 
-The catalog has been taken from the "meth01" file in https://archive.stsci.edu/prepds/hugs/ . It has a file size of over 118MB so I'm not currently including it in the repository.
+The catalog has been taken from the "meth01" file in https://archive.stsci.edu/prepds/hugs/ . It has a file size of over 118MB.
