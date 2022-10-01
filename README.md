@@ -10,4 +10,6 @@ A project dedicated to understanding the process of stellar evolution, and analy
 
 * cluster_diagram.py uses stellar positions as well as apparent magnitudes to plot an approximaion of the star cluster from the snapshot. Unlike color_mag, it also filters out stars with low probability using the probability column.
 
+# WARNING
 
+You are in the testing branch. Here, anything goes.
