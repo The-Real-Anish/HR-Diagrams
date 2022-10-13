@@ -21,13 +21,27 @@ catalog = pd.read_table("NGC2808_catalog.txt", header = None, names = col_names,
 catalog = column_switch(catalog, 'Identification no. of star', 'Iteration star was found in')
 
 #print(catalog.query('`F275W photometric RMS` < 99').sort_values(['F275W photometric RMS']))
-mag_diff = catalog['F275W mag'] - catalog['F336W mag']
+accurate_catalog = catalog.query('`F275W mag` > -99.99 and `F336W mag` > -99.99 and `Membership Probability [-1.0: not available]` > 90')
+accurate_mag = accurate_catalog['F275W mag']
+accurate_mag_diff = accurate_catalog['F275W mag'] - accurate_catalog['F336W mag']
+#F275_mag = catalog['F275W mag']
+#F336_mag = catalog['F336W mag']
+#F275_mag = F275_mag[F275_mag > -99.99]
+#F336_mag = F336_mag[F336_mag > -99.99]
+#mag_diff = F275_mag - F336_mag
+#for star in F275_mag:
+#    mag_diff
+#print(accurate_catalog)
+#print(accurate_mag)
+#print(accurate_mag_diff)
 #print(catalog['F275W mag'])
 #print(catalog['F336W mag'])
 #print(mag_diff)
 CMD = plt.subplot()
-CMD.scatter(mag_diff, catalog['F275W mag'], s = 1, color = 'black', label = 'CMD')
+CMD.scatter(10*accurate_mag_diff, accurate_mag, s = 0.01, color = 'white', label = 'CMD')
 CMD.invert_yaxis()
+background = plt.gca()
+background.set_facecolor('black')
 CMD.set_aspect(1.0/CMD.get_data_ratio(), adjustable='box')
 CMD.set_title("Color-Mag Diagram, NGC2808")
 plt.show()
