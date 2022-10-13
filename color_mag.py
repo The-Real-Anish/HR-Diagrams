@@ -43,6 +43,6 @@ CMD.invert_yaxis()
 background = plt.gca()
 background.set_facecolor('black')
 CMD.set_aspect(1.0/CMD.get_data_ratio(), adjustable='box')
-CMD.set_title("Color-Mag Diagram, NGC2808")
+CMD.set_title("Color-Mag Diagram, NGC-2808")
 plt.show()
 #magnitudes = avg
