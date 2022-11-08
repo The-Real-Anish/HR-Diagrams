@@ -20,7 +20,6 @@ catalog = pd.read_table("NGC2808_catalog.txt", header = None, names = col_names,
                                                skipinitialspace = True, skiprows = 56)
 catalog = column_switch(catalog, 'Identification no. of star', 'Iteration star was found in')
 
-#print(catalog.query('`F275W photometric RMS` < 99').sort_values(['F275W photometric RMS']))
 accurate_catalog = catalog.query('`F275W mag` > -99.99 and `F336W mag` > -99.99 and `Membership Probability [-1.0: not available]` > 90')
 accurate_mag = accurate_catalog['F275W mag']
 accurate_mag_diff = accurate_catalog['F275W mag'] - accurate_catalog['F336W mag']
