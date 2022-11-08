@@ -3,6 +3,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
+#Luminosity of the Sun in Watts(W)
+sum_lum = 3.84*10e23
+
 def column_switch(df, column1, column2):
     i = list(df.columns)
     a, b = i.index(column1), i.index(column2)
@@ -37,8 +40,9 @@ accurate_mag_diff = accurate_catalog['F275W mag'] - accurate_catalog['F336W mag'
 #print(catalog['F336W mag'])
 #print(mag_diff)
 CMD = plt.subplot()
-CMD.scatter(10*accurate_mag_diff, accurate_mag, s = 0.01, color = 'white', label = 'CMD')
+CMD.scatter(accurate_mag_diff, accurate_mag, s = 0.01, color = 'white', label = 'CMD')
 CMD.invert_yaxis()
+
 background = plt.gca()
 background.set_facecolor('black')
 CMD.set_aspect(1.0/CMD.get_data_ratio(), adjustable='box')
