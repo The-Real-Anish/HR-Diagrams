@@ -4,9 +4,9 @@ A project dedicated to understanding the process of stellar evolution, and analy
 
 # Files
 
-* The catalog has been taken from the "meth01" file in https://archive.stsci.edu/prepds/hugs/ . It has a file size of over 118MB.
+* The catalog has been taken from the "meth01" file in https://archive.stsci.edu/prepds/hugs/ . It has a file size of over 118MB, and is the only input involved in the code.
 
-* color_mag.py makes an inverse plot of the difference in apparent magnitudes v/s F275W magnitude.
+* color_mag.py makes a color-magnitude diagram by generating a bubble chart of the difference in apparent magnitudes v/s F275W magnitude.
 
 * cluster_diagram.py uses stellar positions as well as apparent magnitudes to plot an approximaion of the star cluster from the snapshot.
 
